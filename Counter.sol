@@ -6,20 +6,8 @@ pragma solidity ^0.8.0;
 // compiler converts code into evm (ethereum virtual machine) bytecode
 
 contract Counter {
-    uint count; // state variable 
-
-    // constructor is called only once when the contract is deployed to the blockchain 
-    constructor() {
-        count = 0;
-    }
-
-    // public is a visibility modifier
-    // view means read only function (does not modify state)
-    // it is free to call view functions
-
-    function getCount() public view returns(uint) {
-        return count;
-    }
+    // no need to define getter for public state variable  
+    uint public count = 0; 
 
     // write function changes the blockchain state
     // it costs gas to call write functions
